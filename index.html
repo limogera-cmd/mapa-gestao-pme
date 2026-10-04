@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Gestão da Sua Empresa — Diagnóstico Interativo para PMEs</title>
+  <meta name="description" content="Descubra o próximo passo para sua empresa crescer com mais controle e lucro. Responda 3 perguntas e receba seu diagnóstico personalizado.">
+  <meta property="og:title" content="Mapa de Gestão da Sua Empresa — Diagnóstico Interativo">
+  <meta property="og:description" content="Descubra qual modelo de gestão combina com o momento da sua empresa em apenas 3 perguntas.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo">
+        <span class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </span>
+        <div class="brand-text-wrap">
+          <span class="brand-title">Mapa de Gestão</span>
+          <span class="brand-subtitle">Diagnóstico Interativo PME</span>
+        </div>
+      </a>
+      <div class="header-right-meta">
+        <span class="brand-tag"><span class="pulse-dot"></span> Diagnóstico 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE STRIP MAP (progress + stage) -->
+  <div class="map-mobile-strip" id="map-mobile-strip" style="display:none;">
+    <div class="map-strip-inner">
+      <div class="stage-dots-row" id="strip-dots">
+        <span class="sdot" data-stage="1">1</span>
+        <span class="sdot" data-stage="2">2</span>
+        <span class="sdot" data-stage="3">3</span>
+        <span class="sdot" data-stage="4">4</span>
+        <span class="sdot" data-stage="5">5</span>
+      </div>
+      <div class="strip-stage-info" id="strip-info">Mapa de Gestão</div>
+      <button type="button" class="btn-view-map" id="btn-open-map">
+        Ver mapa
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main-layout">
+    <div class="layout-grid">
+
+      <!-- CONTENT COLUMN -->
+      <div class="main-content-column">
+
+        <!-- SCREEN: INTRO (FULL-SCREEN COVER) -->
+        <section class="screen-section active" id="screen-intro">
+          <div class="cover-hero-wrap">
+
+            <div class="cover-badge">
+              <span class="cover-badge-icon">🏛️</span>
+              <span class="cover-badge-text">METODOLOGIA DE GESTÃO EMPRESARIAL PME</span>
+            </div>
+
+            <h1 class="cover-headline">
+              Descubra em qual estágio sua empresa está e como <span class="text-gradient-emerald">organizar sua operação</span>.
+            </h1>
+
+            <p class="cover-subheadline">
+              Ferramenta criada para donos de comércios, lojas, serviços e indústrias que cuidam de vendas, equipe e contas todos os dias. Responda a <strong>3 perguntas objetivas</strong> (1 minuto) e receba seu diagnóstico executivo gratuito.
+            </p>
+
+            <!-- BENTO VALUE CARDS -->
+            <div class="cover-bento-grid">
+              <div class="cover-bento-card">
+                <div class="bento-icon">📊</div>
+                <div class="bento-content">
+                  <h3>1. Diagnóstico do Estágio</h3>
+                  <p>Descubra se sua empresa está em Validação, Tração, Escala, Profissionalização ou Expansão.</p>
+                </div>
+              </div>
+
+              <div class="cover-bento-card">
+                <div class="bento-icon">🔍</div>
+                <div class="bento-content">
+                  <h3>2. Mapeamento de Gargalos</h3>
+                  <p>Identifique exatamente o que consome sua margem financeira e a sua rotina no dia a dia.</p>
+                </div>
+              </div>
+
+              <div class="cover-bento-card">
+                <div class="bento-icon">🎯</div>
+                <div class="bento-content">
+                  <h3>3. Plano de 3 Ações</h3>
+                  <p>Receba orientações práticas e diretas para aplicar imediatamente no seu segmento.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA SECTION -->
+            <div class="cover-cta-wrapper">
+              <button type="button" class="btn-cta-primary btn-cta-cover" id="btn-start-diagnostic">
+                <div class="btn-cta-left">
+                  <span class="btn-cta-text">Iniciar Diagnóstico Gratuito</span>
+                  <span class="btn-cta-sub">3 Perguntas Rápida • Relatório Imediato na Tela</span>
+                </div>
+                <svg class="btn-cta-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+
+              <div class="cover-trust-row">
+                <div class="trust-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  100% Seguro e Gratuito
+                </div>
+                <span class="trust-sep"></span>
+                <div class="trust-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Sem necessidade de cartão
+                </div>
+                <span class="trust-sep"></span>
+                <div class="trust-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Para Comércio, Serviços e Indústria
+                </div>
+              </div>
+            </div>
+
+            <!-- VISUAL STAGES PREVIEW CARD -->
+            <div class="cover-stages-preview-box">
+              <div class="csp-header">
+                <span class="csp-title">Estrutura dos 5 Estágios de Gestão</span>
+                <span class="csp-badge">Metodologia PME</span>
+              </div>
+              <div class="csp-trail">
+                <div class="csp-step">
+                  <div class="csp-step-num">1</div>
+                  <div class="csp-step-name">Validação</div>
+                </div>
+                <div class="csp-connector"></div>
+                <div class="csp-step">
+                  <div class="csp-step-num">2</div>
+                  <div class="csp-step-name">Tração</div>
+                </div>
+                <div class="csp-connector"></div>
+                <div class="csp-step">
+                  <div class="csp-step-num">3</div>
+                  <div class="csp-step-name">Escala</div>
+                </div>
+                <div class="csp-connector"></div>
+                <div class="csp-step">
+                  <div class="csp-step-num">4</div>
+                  <div class="csp-step-name">Profissionalização</div>
+                </div>
+                <div class="csp-connector"></div>
+                <div class="csp-step">
+                  <div class="csp-step-num">5</div>
+                  <div class="csp-step-name">Expansão</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SCREEN: Q1 -->
+        <section class="screen-section" id="screen-q1">
+          <div class="question-wrap">
+            <div class="q-nav">
+              <button type="button" class="btn-back btn-back-step" data-target-screen="intro">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                Voltar
+              </button>
+              <span class="q-progress-text">1 de 3</span>
+            </div>
+
+            <div class="q-title-block">
+              <h2 class="q-title">Quanto sua empresa fatura por mês, em média?</h2>
+              <p class="q-support">Uma estimativa é suficiente para identificar seu momento atual.</p>
+            </div>
+
+            <div class="options-grid">
+              <div class="question-option-card" data-question-id="1" data-option-id="val_10k" data-stage-id="1" data-option-label="Até R$ 10 mil">
+                <span class="option-text">Até R$ 10 mil</span>
+                <span class="option-check">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="question-option-card" data-question-id="1" data-option-id="trac_30k" data-stage-id="2" data-option-label="Acima de R$ 10 mil até R$ 30 mil">
+                <span class="option-text">Acima de R$ 10 mil até R$ 30 mil</span>
+                <span class="option-check">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="question-option-card" data-question-id="1" data-option-id="esc_100k" data-stage-id="3" data-option-label="Acima de R$ 30 mil até R$ 100 mil">
+                <span class="option-text">Acima de R$ 30 mil até R$ 100 mil</span>
+                <span class="option-check">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="question-option-card" data-question-id="1" data-option-id="prof_300k" data-stage-id="4" data-option-label="Acima de R$ 100 mil até R$ 300 mil">
+                <span class="option-text">Acima de R$ 100 mil até R$ 300 mil</span>
+                <span class="option-check">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+              <div class="question-option-card" data-question-id="1" data-option-id="exp_plus" data-stage-id="5" data-option-label="Acima de R$ 300 mil">
+                <span class="option-text">Acima de R$ 300 mil</span>
+                <span class="option-check">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCREEN: Q2 -->
+        <section class="screen-section" id="screen-q2">
+          <div class="question-wrap">
+            <div class="q-nav">
+              <button type="button" class="btn-back btn-back-step" data-target-screen="q1">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                Voltar
+              </button>
+              <span class="q-progress-text">2 de 3</span>
+            </div>
+
+            <div class="q-title-block">
+              <h2 class="q-title">Em qual segmento sua empresa atua?</h2>
+              <p class="q-support">O que funciona para uma empresa de serviços pode precisar de ajustes em um comércio.</p>
+            </div>
+
+            <div class="options-grid two-col">
+              <div class="question-option-card" data-question-id="2" data-option-id="comercio" data-option-label="Comércio e varejo">
+                <span class="option-text">Comércio e varejo</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="alimentacao" data-option-label="Alimentação e bebidas">
+                <span class="option-text">Alimentação e bebidas</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="servicos" data-option-label="Serviços profissionais">
+                <span class="option-text">Serviços profissionais</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="saude" data-option-label="Saúde e bem-estar">
+                <span class="option-text">Saúde e bem-estar</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="educacao" data-option-label="Educação e cursos">
+                <span class="option-text">Educação e cursos</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="tecnologia" data-option-label="Tecnologia">
+                <span class="option-text">Tecnologia</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="industria" data-option-label="Indústria e produção">
+                <span class="option-text">Indústria e produção</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="creator" data-option-label="Creator / Criador de Conteúdo">
+                <span class="option-text">Creator / Criador de Conteúdo</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="2" data-option-id="outro_seg" data-option-label="Outro">
+                <span class="option-text">Outro</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCREEN: Q3 -->
+        <section class="screen-section" id="screen-q3">
+          <div class="question-wrap">
+            <div class="q-nav">
+              <button type="button" class="btn-back btn-back-step" data-target-screen="q2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                Voltar
+              </button>
+              <span class="q-progress-text">3 de 3</span>
+            </div>
+
+            <div class="q-title-block">
+              <h2 class="q-title">O que mais trava o crescimento da sua empresa hoje?</h2>
+              <p class="q-support">Escolha o problema que mais pesa na sua rotina.</p>
+            </div>
+
+            <div class="options-grid">
+              <div class="question-option-card" data-question-id="3" data-option-id="atrair" data-option-label="Atrair mais clientes">
+                <span class="option-text">Atrair mais clientes</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="3" data-option-id="converter" data-option-label="Transformar oportunidades em vendas">
+                <span class="option-text">Transformar oportunidades em vendas</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="3" data-option-id="fidelizar" data-option-label="Fazer clientes voltarem a comprar">
+                <span class="option-text">Fazer clientes voltarem a comprar</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="3" data-option-id="lucro" data-option-label="Melhorar o lucro e controlar os custos">
+                <span class="option-text">Melhorar o lucro e controlar os custos</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="3" data-option-id="equipe" data-option-label="Organizar a equipe e reduzir a dependência de mim">
+                <span class="option-text">Organizar a equipe e reduzir a dependência de mim</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="question-option-card" data-question-id="3" data-option-id="outro_dor" data-option-label="Outro">
+                <span class="option-text">Outro</span>
+                <span class="option-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCREEN: PARTIAL RESULT -->
+        <section class="screen-section" id="screen-partial">
+          <div class="partial-wrap">
+
+            <div class="result-label-tag">
+              <span class="result-label-dot"></span>
+              Este é o momento da sua empresa
+            </div>
+
+            <h2 class="result-main-headline">
+              Seu modelo recomendado:<br>
+              <span class="stage-name-highlight" id="partial-stage-name">—</span>
+            </h2>
+            <p class="result-subtitle" id="partial-context-text">—</p>
+
+            <div class="result-desc-box" id="partial-stage-desc">—</div>
+
+            <!-- Locked Cards -->
+            <h3 class="locked-section-title">3 ações para sua empresa avançar</h3>
+            <p class="locked-section-sub">Veja por onde começar, o que organizar e quais números acompanhar.</p>
+
+            <div class="locked-cards-stack">
+              <div class="locked-card">
+                <div class="locked-blur">
+                  <h4>Ação 1: Atacar o gargalo comercial</h4>
+                  <p>Orientação estratégica completa para destravar o fluxo de vendas imediatamente.</p>
+                </div>
+                <div class="lock-overlay">
+                  <span class="lock-icon-wrap">🔒</span>
+                  <span>Ação Bloqueada</span>
+                </div>
+              </div>
+              <div class="locked-card">
+                <div class="locked-blur">
+                  <h4>Ação 2: Estruturar os processos operacionais</h4>
+                  <p>Organizar procedimentos para garantir margem e autonomia da equipe.</p>
+                </div>
+                <div class="lock-overlay">
+                  <span class="lock-icon-wrap">🔒</span>
+                  <span>Ação Bloqueada</span>
+                </div>
+              </div>
+              <div class="locked-card">
+                <div class="locked-blur">
+                  <h4>Ação 3: Indicador prioritário de progresso</h4>
+                  <p>A métrica que o dono precisa acompanhar toda semana para medir o avanço real.</p>
+                </div>
+                <div class="lock-overlay">
+                  <span class="lock-icon-wrap">🔒</span>
+                  <span>Ação Bloqueada</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lead Form -->
+            <div class="lead-form-wrap">
+              <h3 class="form-title">Libere seu diagnóstico e saiba o que priorizar agora.</h3>
+              <p class="form-support">Informe seu nome e WhatsApp para acessar as 3 ações recomendadas para o momento da sua empresa.</p>
+
+              <form id="lead-capture-form" novalidate>
+                <div class="form-group">
+                  <label for="lead-name" class="form-label">Seu nome</label>
+                  <input type="text" id="lead-name" class="form-input" placeholder="Ex: Carlos Silva" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="lead-whatsapp" class="form-label">Seu WhatsApp com DDD</label>
+                  <input type="tel" id="lead-whatsapp" class="form-input" placeholder="(11) 99999-9999" autocomplete="tel" required>
+                </div>
+
+                <div class="form-error-banner" id="form-error-msg" role="alert"></div>
+
+                <button type="submit" class="btn-submit" id="btn-submit-lead">
+                  <span>Liberar minhas 3 ações prioritárias</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+
+                <p class="submit-microcopy">Você verá o diagnóstico completo na próxima tela.</p>
+
+                <p class="privacy-notice">
+                  Usaremos seus dados para disponibilizar o diagnóstico e entrar em contato sobre os próximos passos.
+                  Consulte nossa <a href="#politica-de-privacidade" target="_blank">Política de Privacidade</a>.
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCREEN: FULL RESULT -->
+        <section class="screen-section" id="screen-full">
+          <div class="full-wrap">
+
+            <div class="result-label-tag">
+              <span class="result-label-dot"></span>
+              Diagnóstico Liberado
+            </div>
+
+            <h1 class="full-headline">Seu próximo passo ficou mais claro.</h1>
+            <p class="full-subheadline">Estas são as 3 ações recomendadas para o momento da sua empresa. Comece pela primeira e acompanhe o resultado.</p>
+
+            <div class="result-summary-pills">
+              <div class="summary-pill">
+                <span class="summary-pill-icon">📌</span>
+                <span class="summary-pill-label">Modelo:</span>
+                <span id="full-summary-stage">—</span>
+              </div>
+              <div class="summary-pill">
+                <span class="summary-pill-icon">🏢</span>
+                <span class="summary-pill-label">Segmento:</span>
+                <span id="full-summary-segment">—</span>
+              </div>
+              <div class="summary-pill">
+                <span class="summary-pill-icon">⚡</span>
+                <span class="summary-pill-label">Prioridade:</span>
+                <span id="full-summary-priority">—</span>
+              </div>
+            </div>
+
+            <p class="actions-section-title">3 Ações Personalizadas</p>
+
+            <div class="unlocked-actions-list" id="unlocked-actions-container">
+              <!-- Injected by JS -->
+            </div>
+
+            <!-- Commercial CTA -->
+            <div class="commercial-card">
+              <h3 class="commercial-title">Quer transformar essas prioridades em um plano para sua empresa?</h3>
+              <p class="commercial-desc">Converse com nossa equipe para entender como aplicar essas ações à sua operação e definir por onde começar.</p>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="btn-whatsapp-cta">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.018 4.142-1.087z"/></svg>
+                Conversar sobre o plano da minha empresa
+              </a>
+              <p class="commercial-note">Nossa equipe vai entrar em contato pelo WhatsApp para conversar sobre seus próximos passos.</p>
+            </div>
+
+          </div>
+        </section>
+
+      </div><!-- /main-content-column -->
+
+      <!-- DESKTOP MAP COLUMN -->
+      <aside class="map-desktop-col" id="map-desktop-container">
+        <!-- Injected by MapComponent -->
+      </aside>
+
+    </div><!-- /layout-grid -->
+  </main>
+
+  <!-- SELECTION TOAST -->
+  <div class="selection-toast" id="selection-toast" role="status" aria-live="polite"></div>
+
+  <!-- MOBILE MAP DRAWER -->
+  <div class="map-mobile-overlay" id="map-mobile-overlay">
+    <div class="map-mobile-backdrop" id="map-mobile-backdrop"></div>
+    <div class="map-mobile-drawer">
+      <div class="drawer-handle"></div>
+      <div class="drawer-header">
+        <span class="drawer-title">Mapa de Gestão Completo</span>
+        <button type="button" class="btn-close-drawer" id="btn-close-map">✕</button>
+      </div>
+      <div id="map-mobile-modal-body">
+        <!-- Injected by MapComponent -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <p>&copy; <span id="year"></span> Mapa de Gestão PME. Todos os direitos reservados.</p>
+    <div class="footer-links">
+      <a href="#politica-de-privacidade">Política de Privacidade</a>
+      <a href="#termos">Termos de Uso</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/map-component.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
