@@ -132,11 +132,11 @@ const MapComponent = {
             ${isActive ? `<div class="ms-you-are-here">📍 Sua empresa está aqui</div>` : ""}
 
             <div class="ms-item-head">
-              <span class="ms-icon">${stage.icon}</span>
-              <div>
+              <div class="ms-title-row">
+                <span class="ms-icon">${stage.icon}</span>
                 <h4 class="ms-name">${stage.name}</h4>
-                <span class="ms-range">${stage.rangeLabel}</span>
               </div>
+              <span class="ms-range">${stage.rangeLabel}</span>
             </div>
 
             <p class="ms-desc">${stage.shortDesc}</p>

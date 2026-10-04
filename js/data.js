@@ -1,47 +1,47 @@
 /**
  * Dados e regras de personalização do Diagnóstico
- */
-
-const STAGES = [
+ *const STAGES = [
   {
     id: 1,
     key: "validacao",
-    rangeLabel: "até R$ 10 mil/mês",
+    rangeLabel: "Até R$ 10 mil/mês",
     name: "Validação",
     shortDesc: "Organizar o caixa e encontrar uma oferta que gere vendas consistentes.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>`
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>`
   },
   {
     id: 2,
     key: "tracao",
-    rangeLabel: "acima de R$ 10 mil até R$ 30 mil/mês",
+    rangeLabel: "R$ 10 mil a R$ 30 mil/mês",
     name: "Tração",
     shortDesc: "Criar uma rotina comercial para atrair clientes e vender com mais frequência.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`
   },
   {
     id: 3,
     key: "escala",
-    rangeLabel: "acima de R$ 30 mil até R$ 100 mil/mês",
+    rangeLabel: "R$ 30 mil a R$ 100 mil/mês",
     name: "Escala",
     shortDesc: "Estruturar processos e equipe para crescer preservando a margem.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
   },
   {
     id: 4,
     key: "profissionalizacao",
-    rangeLabel: "acima de R$ 100 mil até R$ 300 mil/mês",
+    rangeLabel: "R$ 100 mil a R$ 300 mil/mês",
     name: "Profissionalização",
     shortDesc: "Acompanhar resultados e distribuir responsabilidades para reduzir a dependência do dono.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`
   },
   {
     id: 5,
     key: "expansao",
-    rangeLabel: "acima de R$ 300 mil/mês",
+    rangeLabel: "Acima de R$ 300 mil/mês",
     name: "Expansão",
     shortDesc: "Planejar novos mercados e canais com estrutura e controle financeiro.",
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`
+  }
+];-10z"/></svg>`
   }
 ];
 
